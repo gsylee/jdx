@@ -1,0 +1,434 @@
+/* box-sizing */
+#content,.user-choose .cs-buy,.nav li,.user-choose .price-info,.gd-point li,.use-guide li,.cm-server li,#tagCon > li  {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  /* 这个属性ie8开始支持 */
+    /* 这个属性不能被继承 */
+}
+/* 相同的h1代码  padding-top和  padding-bottom   */ 
+.gd-point > h1, .use-guide > h1,.cm-server > h1 ,.server > h1 {
+    padding: 70px 0 68px 0;
+    font-size: 33px;
+}
+
+/* 相同的段落缩进 */
+.user-choose .price-info,.user-choose .mk-buy {
+    text-indent: 22px;
+}
+
+
+/* 使用指南 在线客服 相同的背景颜色 */
+.use-guide,.server {
+    background: #f8fcff;
+}
+
+/* 相同的padding-bottom */
+.use-guide,.cm-server,.server {
+    padding-bottom: 70px;
+}
+
+/* 页面相同的border-radius 兼容代码 */
+.mk-buy > button ,#upc-table button.upc,#upc-table button.ean {
+    -webkit-border-raduis: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* #content */
+#content {
+    min-width: 1160px;
+    width: 1160px;
+    margin: 92px auto;
+}
+/* 商品购买区 */
+.user-choose img {
+    width: 451px;
+    height: 451px;
+    margin-right: 28px;
+    border: 1px solid #e8e8e8;
+}
+.user-choose .cs-buy {
+    width: 678px;
+    height: 451px;
+    padding-top: 12px;
+
+}
+.user-choose .cs-buy > h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.user-choose .cs-buy > p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 22px;
+}
+/* 价格详情 */
+.user-choose .price-info {
+    height: 132px;
+    background: #f8f8f8;
+    border-top: 1px dotted #5fcde2;
+}
+.price > p:first-child,.count > p:first-child {
+    color: #a5988f;
+}
+.price > p:first-child {
+    margin-top: 28px;
+}
+.price > p > span {
+    font-size: 29px;
+    color: #ff0036;
+   margin-left: 140px;
+}
+.count {
+    margin-top: 30px;
+}
+.count > p > span {
+    margin-left: 170px;
+}
+
+/* 市场价- 立即购买 */
+.user-choose .mk-buy {
+    margin-top: 15px;
+}
+.user-choose .mk-buy > div {
+    line-height: 40px;
+}
+.mk-buy > span:first-child {
+    /* margin-right: 18px; */
+    color: #666;
+}
+
+.choose {
+    position: relative;
+}
+.choose  input {
+    width: 38px;
+    height: 32px;
+    outline: none;
+    padding-left: 5px;
+    border: 1px solid #b9afaf;
+}
+
+ .cs  > span {
+    position: absolute;
+    left: 150px;
+    width: 16px;
+    height: 13px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+/* 当个数为1的时候，禁止点击减少按钮  */
+.cs > .no-click {
+    cursor: not-allowed;
+    background: #cfcfcf;
+}
+
+/* 使用伪类选择器，给两个点击按钮添加三角形 */
+.cs > .up::after {
+   border-width: 0 4px 4px 4px;
+   border-color:  transparent transparent #878787 transparent ;
+}
+.cs > .up {
+    top: 5px;
+}
+.cs > .down {
+    bottom: 7px;
+}
+.cs > .down::after {
+   border-width: 4px 4px 0 4px;
+   border-color: #878787 transparent transparent transparent;
+}
+.cs > .up::after,.cs > .down::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+}
+
+.choose .unit {
+   margin-left: 10px;
+}
+/* 总价 */
+.sum > span:first-child {
+    padding-left: 20px;
+    border-left: 1px dotted #e5e5e5;
+}
+.sum > .all-sum {
+    font-size: 18px;
+    color: #ff0036;
+}
+
+/*  相同的border-radius 把公共样式中的border-radius代码放到这里 */
+
+.mk-buy > button {
+    margin-top: 15px;
+    width: 171px;
+    height: 48px;
+    background: #11c5e0;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 22px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+/* 给button按钮，添加一个鼠标经过效果 */
+.mk-buy > button:hover {
+    background: rgba(17,197,224,.8);
+}
+
+/* 商品介绍 */
+.pro-info {
+    margin-top: 28px;
+    border: 1px solid #dfdfdf;
+    text-align: center;
+}
+.pro-info .nav {
+    height: 50px;
+    line-height: 50px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #dfdfdf
+}
+
+.nav  li  {
+    float: left;
+    padding: 0 20px 0 20px;
+    border-right: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+.nav li > span {
+    color: #65d3e3;
+}
+/* li的高亮显示 */
+.current {
+    background: #fff url(../images/current.png ) no-repeat top ;
+    border-bottom: 1px solid #fff;
+    border-top: 2px solid #5fcde2;
+}
+
+/* 船长优势  */  
+.pro-info > .gd-point {
+    margin-bottom: 2px;
+}
+
+/* 相同的h1代码的占位符 */
+
+/* 列表 */
+.gd-point li {
+    width: 295px;
+    height: 198px;
+    float: left;
+    /* 给 船长优势的每个li添加一个 margin-bottom: 68px; */
+    margin: 0 80px 68px 28px;
+}
+.gd-point li,.use-guide li,.cm-server li  {
+    -webkit-box-shadow: 0 0 15px rgba(62,190,208,.5);
+    -moz-box-shadow: 0 0 15px rgba(62,190,208,.5);
+    -o-box-shadow: 0 0 15px rgba(62,190,208,.5);
+    box-shadow: 0 0 15px  rgba(62,190,208,.5);
+    /* behavior: url(/css/pie.htc); /* 这个文件的路径要用绝对路径，合并代码的时候，要检查这个路径 */
+    /* position: relative;
+    z-index: 5;  */
+}
+/* 鼠标经过的样式 */
+.gd-point li:hover,.use-guide li:hover,.cm-server li:hover {
+    -webkit-box-shadow: 0 0 20px rgba(62,190,208,.8);
+    -moz-box-shadow: 0 0 20px rgba(62,190,208,.8);
+    -o-box-shadow: 0 0 20px rgba(62,190,208,.8);
+    box-shadow: 0 0 20px  rgba(62,190,208,.9);
+}
+
+.gd-point li > div {
+    width: 91px;
+    margin: 25px auto 30px auto;
+    height: 91px;
+}
+
+.gd-point li > h3 {
+    font-size: 18px;
+}
+.gd-point h3 > p {
+    height: 28px;
+    line-height: 28px
+}
+
+/* 使用指南 在线客服 相同的背景颜色 */
+
+
+/* 相同的padding-bottom */
+
+.use-guide li {
+    width: 261px;
+    height: 314px;
+    float: left;
+    margin-right: 16px;
+    background: #fff;
+    position: relative;
+}
+/* 箭头指引 */
+.use-guide li > i {
+    position: absolute;
+    z-index: 5;
+}
+.use-guide li > i.arrow {
+    width: 32px;
+    height: 32px;
+    background: url(../images/upc-arrow.png) no-repeat center;
+    top: 30%;
+    right: -24px;
+}
+/* 序号 */
+.use-guide li > i.radius {
+    width: 25px;
+    /* height: 20px; */
+    line-height: 25px;
+    -webkit-border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: #11c5e0;
+    left: 20px ;
+    top: 20px;
+}
+/* 切割序号的一角 */
+.use-guide .radius > i {
+    position: absolute;
+    width: 24px;
+    height:45px;
+    z-index: 10;
+    left: 15px;
+    top: 0;
+    -ms-transform:rotate(15deg); 	
+    -moz-transform:rotate(15deg); 	
+    -webkit-transform:rotate(15deg); 
+    -o-transform:rotate(15deg);
+    transform: rotate(15deg);
+    background: #fff;
+}
+
+/* 使用指南 图片 */
+.use-guide li > div {
+    width: 223px;
+    height: 150px;
+    margin: 40px auto 0px auto;
+}
+.use-guide li > h3 {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* 问题与解答 */
+.cm-server ul {
+    width: 543px;
+    text-align: left;
+}
+.cm-server-left {
+    margin: 0 12px 0 24px;
+}
+.cm-server-right {
+    margin: 0 24px 0 12px;
+}
+/* 问题与解答下面的li标签 */
+.cm-server li {
+    padding: 15px 0 14px 26px;
+    margin-bottom: 16px;
+}
+.cm-server li > h4 {
+    font-size: 18px;
+    line-height: 36px;
+}
+.cm-server li > p {
+    font-size: 14px;
+    color: #626770;
+    line-height: 32px;
+}
+.cm-server p > i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #5fcde2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius:50%;  /* ie9才支持border-radius ie8只能平稳退化了 */
+}
+
+/* 售后问题 */
+.server > h1 {
+    padding-bottom: 26px;
+}
+.server > p {
+    font-size: 14px;
+    line-height: 23px;
+}
+.server > p > a {
+    color: #11c5e0;
+}
+
+/* 第二页开始 */
+.for-table {
+    padding: 38px 30px 0 38px;
+}
+
+#upc-table > thead {
+    background: #f2f2f2;
+}
+
+#upc-table .th-inner{
+    padding:0 8px;
+    line-height: 36px;
+    height: 36px;
+    color: #999;
+}
+#upc-table > thead th,#upc-table > tbody td {
+    border: none;
+}
+#upc-table > tbody > tr {
+    height: 128px;
+}
+#upc-table > tbody > tr:hover {
+    background: #fef9f9;
+}
+.fixed-table-pagination {
+    background: #fcf5f5;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+/* 添加upc按钮样式 */
+#upc-table  button.upc,#upc-table button.ean {
+    display: block;
+    width: 123px;
+    height: 42px;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    padding-left: 35px;
+}
+/* 数字码背景样式 */
+#upc-table .upc:first-child ,#upc-table .ean:first-child {
+    margin-bottom: 8px;
+    background:#dfdfdf url(../images/upc-btn1.png) no-repeat 10px ;
+} 
+#upc-table .upc:first-child:hover ,#upc-table .ean:first-child:hover {
+    background: #65d3e3 url(../images/upc-btn1-active.png) no-repeat 10px;
+    color: #fff;
+}
+/* 条形码背景样式 */
+#upc-table .btn-style {
+    background: #dfdfdf url(../images/upc-btn2.png) no-repeat 10px ;
+}
+#upc-table .btn-style:hover {
+    background: #65d3e3 url(../images/upc-btn2-active.png) no-repeat 10px ;
+    color: #fff;
+}
+
+

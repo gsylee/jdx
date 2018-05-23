@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UPC/EAN</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!--[if lt IE 9]>
+    	<style>
+            .gd-point li,.use-guide li,.cm-server li  {
+                     border: 1px solid #bae5e9;
+                     }
+                     .choose input {
+                         line-height: 32px;
+                     }
+            .cs .up {
+                top: 4px;
+            }
+            .cs .down {
+                bottom: 8px;
+            }
+
+        </style>
+     <![endif]-->
+</head>
+<body>
+    <!-- content部分 -->
+    <div id="content">
+        <!-- 商品购买区域 -->
+        <div class=" user-choose clearfix">
+            <!-- 图片 -->
+            <div class="left ">
+                <img src="images/upc.png" alt="这里有张图片">
+            </div>
+            <!-- 右边相关信息 -->
+            <div class="right cs-buy">
+                <!-- 2级标题 -->
+                <h2>UPC码/EAN码/</h2>
+                <p>
+                    亚马逊UPC码,口碑保障,质量放心,服务贴心,卖家省心
+                </p>
+                <div class="price-info">
+                    <!-- 价格 -->
+                    <div class="price clearfix">
+                        <p class="left">价格</p>
+                        <p class="left" style='margin-top: 14px' >
+                            <span style='margin-left: 52px;'>&yen;0.50</span>
+                            <span>&yen;0.45</span>
+                            <span>&yen;0.40</span>
+                        </p>
+                    </div>
+                    <!-- 购买量 -->
+                    <div class="count clearfix">
+                        <p class="left">购买量</p>
+                        <p class="left">
+                            <span style='margin-left: 42px;'>2-99个</span>
+                            <span>100-1000个</span>
+                            <span>&ge;1000个</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 市场价-立即购买 -->
+                <div class="mk-buy">
+                    <div>
+                        <span>市场价</span>
+                        <span style='margin-left: 45px;'>&yen;1.00/个</span>
+                    </div>
+                    <div>
+                        <span>销量</span>
+                        <span style='margin-left: 55px;'>10000个</span>
+                    </div>
+                    <div class='clearfix choose'  id='cs-shop'> 
+                        <span class='left'>数量</span>
+                        <div class="left cs "  style='margin-left: 38px;'>
+                            <input   type="text" value='1' >
+                            <span  class='up' id='up' ></span>
+                            <span  class='down no-click  ' id='down' ></span>
+                        </div>
+                        <span class="left unit " >个</span>
+                        <div class="left sum">
+                            <span>总价</span>
+                            <span class='all-sum' id='all-price'>1</span>
+                            <span>元</span>
+                        </div>
+                    </div>
+                    <!-- 立即购买 -->
+                    <button id="btn" type='button' >立即购买</button>
+                </div>
+            </div>
+        </div>
+        <!-- 商品介绍 -->
+        <div class="pro-info">
+            <div class="nav">
+                <ul class='clearfix' id='tag' >
+                    <li class='current' >商品介绍</li>
+                    <li>
+                        已购买UPC
+                      <span>(515)</span>  
+                    </li>
+                </ul>
+            </div>
+            <!-- 选项卡切换效果 -->
+            <ul id="tagCon">
+                <li>
+                         <!-- 船长优势 -->
+                    <div class="gd-point">
+                        <h1>船长UPC码的优势</h1>
+                        <!-- 列表 -->
+                        <ul class='clearfix' >
+                            <li>
+                                <div style='background:url(images/upc-icon-adv1.png) no-repeat center;'></div>
+                                <h3>国际编码中心GS1认证</h3>
+                            </li>
+                            <li >
+                                <div style='background:url(images/upc-icon-adv2.png) no-repeat center; margin-bottom: 10px;'></div>
+                                <h3>
+                                    <p>无需额外费用</p>
+                                    <p>同时获取UPC码和EAN码</p>
+                                </h3>
+                            </li>
+                            <li style='margin-right: 28px'>
+                                <div style='background:url(images/upc-icon-adv3.png) no-repeat center;'></div>
+                                <h3>
+                                    无年费及额外隐形费用
+                                </h3>
+                            </li>
+                            <li>
+                                <div style='background:url(images/upc-icon-adv4.png) no-repeat center;'></div>
+                                <h3>专业的售服务</h3>
+                            </li>
+                            <li>
+                                <div style='background:url(images/upc-icon-adv5.png) no-repeat center;'></div>
+                                <h3>批量购买更优惠</h3>
+                            </li>
+                            <li style='margin-right: 28px;'>
+                                <div style='background:url(images/upc-icon-adv6.png) no-repeat center; margin-bottom: 10px;'></div>
+                                <h3>
+                                    <p>系统自动发货</p>
+                                    <p>24小时不间断服务 </p>
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 使用指南 -->
+                    <div class="use-guide">
+                        <h1>怎样使用UPC码和EAN码</h1>
+                        <!-- 4个li -->
+                        <ul class='clearfix' >
+                            <li style="margin-left: 28px;">
+                                <i class='radius'>
+                                    1
+                                    <i></i>
+                                </i>
+                                <div style='background: url(images/upc-icon-b1.png) no-repeat center;'></div>
+                                <h3>
+                                    <p>购买完后再 &quot;已购买UPC&quot;中</p>
+                                    <p>下载相应的数字码和条形码</p>
+                                </h3>
+                                <i class='arrow'></i>
+                            </li>
+                            <li>
+                                <i class='radius'>
+                                    2
+                                    <i></i>
+                                </i>
+                                <div style='background: url(images/upc-icon-b2.png) no-repeat center;'></div>
+                                <h3>
+                                    <p>每个UPC码或EAN码只可使用</p>
+                                    <p>一次;同一订单购买的UPC码</p>
+                                    <p>和EAN码只能使用一个;</p>
+                                </h3>
+                                <i class='arrow'></i>
+                            </li>
+                            <li>
+                                <i class='radius'>
+                                    3
+                                    <i></i>
+                                </i>
+                                <div style='background: url(images/upc-icon-b3.png) no-repeat center;'></div>
+                                <h3>
+                                    <p>UPC码可在亚马逊任意站点使</p>
+                                    <p>用,且不限制类目;</p>
+                                </h3>
+                                <i class='arrow'></i>
+                            </li>
+                            <li style="margin-right: 28px">
+                                <i class='radius'>
+                                    4
+                                    <i></i>
+                                </i>    
+                                <div style='background: url(images/upc-icon-b4.png) no-repeat center;'></div>
+                                <h3>
+                                    <p>一个SKU对应一个UPC码或</p>
+                                    <p>EAN码;</p>
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 问题和解答  customer service -->
+                    <div class="cm-server clearfix">  
+                        <h1>购买常见问题与解答</h1>
+                        <!-- Questions and answers  -->
+                        <ul class="left cm-server-left">
+                            <li>
+                                <h4 style="color:#5fcde2;" >Q1：你们的UPC码是用生成器生成的吗?</h4>
+                                <p>
+                                    <i></i>
+                                    不是的,我们的UPC码都是从正规渠道进货的,我们不使用UPC码生成器,
+                                    
+                                </p>
+                                <p>
+                                    也不推荐客户使用生成器。
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Q3：UPC码是什么?</h4>
+                                <p>
+                                    <i></i>
+                                    UPC码商品条码是用来表示UCC-12商品标识代码的条码符号,是由美国统
+                                </p>
+                                <p> 一代码委员会(UCC)制定的一种条码码制，主要用于美国和加拿大地区零</p>
+                                <p>售商品上。</p>
+                            </li>
+                            <li >
+                                <h4>Q5：如何同时获得UPC码和EAN码?</h4>
+                                <p>
+                                    <i></i>
+                                    我们为您提供UPC码和EAN码,您购买一种码,我们为您免费自动转换
+                                </p>
+                                <p style="padding-bottom: 5px;" >
+                                    为另外一种码,当然2者只能使用1个哦,您可选择使用。
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="right cm-server-right ">
+                            <li>
+                                <h4>Q2：你们是卖家吗?让你们知道我用的是什么码会不会不安
+                                </h4>
+                                <h4>全啊?</h4>
+                                <p>
+                                    <i></i>
+                                    请放心,我们是真正的电商服务提供商,不是卖家,也不靠做亚马逊生意营
+                                </p>
+                                <p>
+                                    利
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Q4：UPC码和EAN码的区别?</h4>
+                                <p>
+                                    <i></i>
+                                    UPC码是美国最常用的条形码,EAN条码是国际物品编码协会制定的一种条
+                                </p>
+                                <p>码,已经遍布全球90多个国家和地区,如果您打算在美国境外销售产品,</p>
+                                <p>
+                                    EAN码可能最适合您。在UPC码前面加&quot;U&quot;就能当EAN码用。
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Q6：UPC码有使用期限吗?我一次购买太多会不会过期啊?</h4>
+                                <p>
+                                    <i></i>
+                                    UPC码永久有效,购买后您就是该UPC码的唯一合法使用人。
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 售后问题 -->
+                    <div class="server">
+                        <h1>
+                            售后有问题,找我们
+                        </h1>
+                        <p>
+                            亚马逊船长承诺,如果遇到UPC码或EAN码由于重复而不能使用的问题,
+                            <p>
+                                可联系我们的 <a href="#">在线客服</a> ,我们将免费为您更换。
+                            </p>
+                        </p>
+                    </div>
+                </li>
+                <!-- table页面开始 -->
+                <li style='display: none;' class='for-table' >
+                    <table id="upc-table"></table>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src='js/jquery.min.js'></script>
+    <!-- 引入bootstrap和bootstrap-table文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+
+    <script src='js/index.js'></script>
+    <script>
+        $(function (){
+            // 调用index的方法
+            Index.tagChange();
+            Index.chooseShop();
+            Index.paOrder();
+            Index.upcTable();
+        });
+    </script>
+</body>
+</html>

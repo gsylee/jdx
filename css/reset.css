@@ -1,0 +1,34 @@
+body,
+h1,h2,h3,h4,h5,h6,
+ul,ol,li,dl,dd,
+p,hr,pre,blockquote,
+form,input,fieldset,legend,button,textarea,select,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{
+	font:12px 'Microsoft Yahei', Arial,Verdana,Helvetica,sans-serif;
+    background:#FFF;
+    color: #333;
+    /* text-align: center;  ie低版本这个属性让文字和块元素剧中，可以利用这个浏览器bug */
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+em,i,address,cite{font-style:normal;}
+ul{list-style:none;}
+a {text-decoration: none; color: #333;}
+a:hover {color:#0099E5;}
+input,textarea{-webkit-appearance:none;}
+table{border-collapse: collapse;border-spacing:0;}
+img{border:0;vertical-align: top;}
+/* 浮动 */
+.left{float:left;}
+.right{float:right;}
+/* 清除浮动 */
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	visibility: hidden;
+	overflow: hidden;
+	height:0;
+	font-size:0;
+}
+.clearfix{zoom:1;}
+
