@@ -7,7 +7,7 @@
 }
 /* 相同的h1代码  padding-top和  padding-bottom   */ 
 .gd-point > h1, .use-guide > h1,.cm-server > h1 ,.server > h1 {
-    padding: 70px 0 68px 0;
+    padding: 66px 0 50px 0;
     font-size: 33px;
 }
 
@@ -15,7 +15,6 @@
 .user-choose .price-info,.user-choose .mk-buy {
     text-indent: 22px;
 }
-
 
 /* 使用指南 在线客服 相同的背景颜色 */
 .use-guide,.server {
@@ -28,7 +27,7 @@
 }
 
 /* 页面相同的border-radius 兼容代码 */
-.mk-buy > button ,#upc-table button.upc,#upc-table button.ean {
+.mk-buy > button ,.gd-point li,.use-guide li,.cm-server li,#upc-table button.upc,#upc-table button.ean {
     -webkit-border-raduis: 4px;
     -moz-border-radius: 4px;
     -o-border-radius: 4px;
@@ -40,6 +39,7 @@
     min-width: 1160px;
     width: 1160px;
     margin: 92px auto;
+    margin-bottom: 0;
 }
 /* 商品购买区 */
 .user-choose img {
@@ -69,22 +69,54 @@
     background: #f8f8f8;
     border-top: 1px dotted #5fcde2;
 }
-.price > p:first-child,.count > p:first-child {
-    color: #a5988f;
+.curPrice {
+    font-weight: bold;
 }
-.price > p:first-child {
-    margin-top: 28px;
+
+/* 使用定位修改页面的价格部分 */
+.price {
+    position: relative;
+    margin-bottom: 82px;
 }
-.price > p > span {
-    font-size: 29px;
+.price > span,.count > p:first-child {
+    color: #a5988f;   
+}
+.price > span {
+    position: absolute;
+    top: 32px;
+    left: 0;
+}
+.price > .price1,.price > .price2,.price > .price3 {
+    position: absolute;
+    top: 18px;
+}
+.price > .price1 {
+    left: 96px;
+}
+.price > .price2 {
+    left: 320px;
+}
+.price > .price3 {
+    left: 536px;
+}
+.price > p {
     color: #ff0036;
-   margin-left: 140px;
 }
+.price > p >.yen {
+    margin-right: 4px;
+    font-size: 18px;
+}
+.price > p > .num {
+    font-size: 29px;
+}
+
 .count {
     margin-top: 30px;
 }
+
 .count > p > span {
-    margin-left: 170px;
+    margin-left: 177px;
+    text-align: left;
 }
 
 /* 市场价- 立即购买 */
@@ -94,9 +126,9 @@
 .user-choose .mk-buy > div {
     line-height: 40px;
 }
-.mk-buy > span:first-child {
+.mk-buy  span:first-child {
     /* margin-right: 18px; */
-    color: #666;
+    color: #999;
 }
 
 .choose {
@@ -109,10 +141,13 @@
     padding-left: 5px;
     border: 1px solid #b9afaf;
 }
+.choose input:focus {
+    border: 1px solid #11c5e0;
+}
 
  .cs  > span {
     position: absolute;
-    left: 150px;
+    left: 170px;
     width: 16px;
     height: 13px;
     border: 1px solid #999;
@@ -131,9 +166,11 @@
 }
 .cs > .up {
     top: 5px;
+    box-sizing: border-box;
 }
 .cs > .down {
     bottom: 7px;
+    box-sizing: border-box;
 }
 .cs > .down::after {
    border-width: 4px 4px 0 4px;
@@ -162,11 +199,13 @@
 .sum > .all-sum {
     font-size: 18px;
     color: #ff0036;
+    font-weight: bold;
 }
 
 /*  相同的border-radius 把公共样式中的border-radius代码放到这里 */
 
 .mk-buy > button {
+    display: block;
     margin-top: 15px;
     width: 171px;
     height: 48px;
@@ -177,6 +216,7 @@
     outline: none;
     cursor: pointer;
     border: none;
+    text-indent: 0;
 }
 /* 给button按钮，添加一个鼠标经过效果 */
 .mk-buy > button:hover {
@@ -185,15 +225,17 @@
 
 /* 商品介绍 */
 .pro-info {
-    margin-top: 28px;
-    border: 1px solid #dfdfdf;
+    margin-top: 60px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;   
     text-align: center;
 }
 .pro-info .nav {
     height: 50px;
     line-height: 50px;
     background: #f9f9f9;
-    border-bottom: 1px solid #dfdfdf
+    border: 1px solid #dfdfdf;
+    border-top: none;
 }
 
 .nav  li  {
@@ -201,6 +243,9 @@
     padding: 0 20px 0 20px;
     border-right: 1px solid #dfdfdf;
     cursor: pointer;
+    height: 51px;
+    transition: all 0s;
+
 }
 .nav li > span {
     color: #65d3e3;
@@ -228,20 +273,20 @@
     margin: 0 80px 68px 28px;
 }
 .gd-point li,.use-guide li,.cm-server li  {
-    -webkit-box-shadow: 0 0 15px rgba(62,190,208,.5);
-    -moz-box-shadow: 0 0 15px rgba(62,190,208,.5);
-    -o-box-shadow: 0 0 15px rgba(62,190,208,.5);
-    box-shadow: 0 0 15px  rgba(62,190,208,.5);
+    -webkit-box-shadow: 0 0 10px #e2f2fd;
+    -moz-box-shadow: 0 0 10px#e2f2fd;
+    -o-box-shadow: 0 0 10px #e2f2fd;
+    box-shadow: 0 0 10px  #e2f2fd;
     /* behavior: url(/css/pie.htc); /* 这个文件的路径要用绝对路径，合并代码的时候，要检查这个路径 */
     /* position: relative;
     z-index: 5;  */
 }
 /* 鼠标经过的样式 */
 .gd-point li:hover,.use-guide li:hover,.cm-server li:hover {
-    -webkit-box-shadow: 0 0 20px rgba(62,190,208,.8);
-    -moz-box-shadow: 0 0 20px rgba(62,190,208,.8);
-    -o-box-shadow: 0 0 20px rgba(62,190,208,.8);
-    box-shadow: 0 0 20px  rgba(62,190,208,.9);
+    -webkit-box-shadow: 0 0 20px #c6e5ff;
+    -moz-box-shadow: 0 0 20px #c6e5ff;
+    -o-box-shadow: 0 0 20px #c6e5ff;
+    box-shadow: 0 0 20px #c6e5ff;
 }
 
 .gd-point li > div {
@@ -271,17 +316,24 @@
     background: #fff;
     position: relative;
 }
+.gd-point li:hover{
+    transition: transform .5s;
+    transform: translateY(-10px) scale(1.04);
+    -moz-transform: translateY(-10px) scale(1.04);
+    -webkit-transform: translateY(-10px) scale(1.04);
+    -ms-transform: translateY(-10px) scale(1.04);
+    -o-transform: translateY(-10px) scale(1.04);
+}
 /* 箭头指引 */
 .use-guide li > i {
     position: absolute;
-    z-index: 5;
 }
-.use-guide li > i.arrow {
+.use-guide li > i.upc-arrow {
     width: 32px;
     height: 32px;
     background: url(../images/upc-arrow.png) no-repeat center;
     top: 30%;
-    right: -24px;
+    left: -24px;
 }
 /* 序号 */
 .use-guide li > i.radius {
@@ -295,6 +347,7 @@
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
+    font-style: normal;
     background: #11c5e0;
     left: 20px ;
     top: 20px;
@@ -303,12 +356,12 @@
 .use-guide .radius > i {
     position: absolute;
     width: 24px;
-    height:45px;
+    height:45px;.gd-point li
     z-index: 10;
     left: 15px;
     top: 0;
-    -ms-transform:rotate(15deg); 	
-    -moz-transform:rotate(15deg); 	
+    -ms-transform:rotate(15deg);    
+    -moz-transform:rotate(15deg);   
     -webkit-transform:rotate(15deg); 
     -o-transform:rotate(15deg);
     transform: rotate(15deg);
@@ -353,8 +406,8 @@
 }
 .cm-server p > i {
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border: 2px solid #5fcde2;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -369,10 +422,15 @@
 .server > p {
     font-size: 14px;
     line-height: 23px;
+    color: #626770;
 }
 .server > p > a {
     color: #11c5e0;
 }
+.server > p > a:hover {
+    opacity: .7;
+}
+
 
 /* 第二页开始 */
 .for-table {
@@ -394,6 +452,7 @@
 }
 #upc-table > tbody > tr {
     height: 128px;
+    border-bottom: 1px solid #e6e6e6;
 }
 #upc-table > tbody > tr:hover {
     background: #fef9f9;

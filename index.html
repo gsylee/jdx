@@ -44,22 +44,30 @@
                     亚马逊UPC码,口碑保障,质量放心,服务贴心,卖家省心
                 </p>
                 <div class="price-info">
-                    <!-- 价格 -->
-                    <div class="price clearfix">
-                        <p class="left">价格</p>
-                        <p class="left" style='margin-top: 14px' >
-                            <span style='margin-left: 52px;'>&yen;0.50</span>
-                            <span>&yen;0.45</span>
-                            <span>&yen;0.40</span>
+                    <!-- 使用定位修改 页面的价格部分 -->
+                    <div id="price" class="price">
+                        <span>价格</span>
+                        <p class='price1'>
+                            <span class='yen'>&yen;</span>
+                            <span class='num' >0.50</span>
+                        </p>
+                        <p class="price2">
+                            <span class='yen'>&yen;</span>
+                            <span class='num' >0.45</span>
+                        </p>
+                        <p class="price3">
+                            <span class='yen'>&yen;</span>
+                            <span class='num' >0.40</span>
                         </p>
                     </div>
+
                     <!-- 购买量 -->
                     <div class="count clearfix">
                         <p class="left">购买量</p>
                         <p class="left">
                             <span style='margin-left: 42px;'>2-99个</span>
                             <span>100-1000个</span>
-                            <span>&ge;1000个</span>
+                            <span style='margin-left: 150px'>&ge;1000个</span>
                         </p>
                     </div>
                 </div>
@@ -67,15 +75,15 @@
                 <div class="mk-buy">
                     <div>
                         <span>市场价</span>
-                        <span style='margin-left: 45px;'>&yen;1.00/个</span>
+                        <span style='margin-left: 58px;'>&yen;1.00/个</span>
                     </div>
                     <div>
                         <span>销量</span>
-                        <span style='margin-left: 55px;'>10000个</span>
+                        <span style='margin-left: 70px;'>10000个</span>
                     </div>
                     <div class='clearfix choose'  id='cs-shop'> 
                         <span class='left'>数量</span>
-                        <div class="left cs "  style='margin-left: 38px;'>
+                        <div class="left cs "  style='margin-left: 52px;'>
                             <input   type="text" value='1' >
                             <span  class='up' id='up' ></span>
                             <span  class='down no-click  ' id='down' ></span>
@@ -83,7 +91,7 @@
                         <span class="left unit " >个</span>
                         <div class="left sum">
                             <span>总价</span>
-                            <span class='all-sum' id='all-price'>1</span>
+                            <span class='all-sum' id='all-price'>1.00</span>
                             <span>元</span>
                         </div>
                     </div>
@@ -160,9 +168,9 @@
                                     <p>购买完后再 &quot;已购买UPC&quot;中</p>
                                     <p>下载相应的数字码和条形码</p>
                                 </h3>
-                                <i class='arrow'></i>
                             </li>
                             <li>
+                                <i class='upc-arrow'></i>
                                 <i class='radius'>
                                     2
                                     <i></i>
@@ -173,9 +181,9 @@
                                     <p>一次;同一订单购买的UPC码</p>
                                     <p>和EAN码只能使用一个;</p>
                                 </h3>
-                                <i class='arrow'></i>
                             </li>
                             <li>
+                                <i class='upc-arrow'></i>
                                 <i class='radius'>
                                     3
                                     <i></i>
@@ -185,9 +193,9 @@
                                     <p>UPC码可在亚马逊任意站点使</p>
                                     <p>用,且不限制类目;</p>
                                 </h3>
-                                <i class='arrow'></i>
                             </li>
                             <li style="margin-right: 28px">
+                                <i class='upc-arrow'></i>
                                 <i class='radius'>
                                     4
                                     <i></i>
@@ -277,7 +285,8 @@
                         <p>
                             亚马逊船长承诺,如果遇到UPC码或EAN码由于重复而不能使用的问题,
                             <p>
-                                可联系我们的 <a href="#">在线客服</a> ,我们将免费为您更换。
+                                可联系我们的 <a href="#" >在线客服
+                                   </a> &nbsp;, 我们将免费为您更换。
                             </p>
                         </p>
                     </div>
